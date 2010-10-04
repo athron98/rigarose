@@ -1182,52 +1182,27 @@ unsigned int CPlayer::GetDefense( )
 unsigned int CPlayer::GetAttackSpeed( )
 {
     UINT aspeed = 0;
-	if( items[7].itemnum!=0 && items[7].count > 0 )
+	//LMA: new formula:
+    int ind_0=17;   //For naRose BEFORE client 259, it's 12. It's the Fast + 0 (normal) offset.
+    if(items[7].itemnum!=0 && items[7].count > 0)
     {
         UINT wpnspd = 0;
         wpnspd = GServer->EquipList[WEAPON].Index[items[7].itemnum]->attackspeed;
-        switch(wpnspd)
+ 
+        int temp_speed=88+((ind_0-wpnspd)*5);
+        if (temp_speed<=0||wpnspd==0)
         {
-            case 20:
-                aspeed=53;  //slow -8
-            break;
-            case 18:
-                aspeed=63;  //slow -6
-            break;
-            case 13:
-                aspeed=83;  //LMA: slow -1
-            break;
-            case 12: //normal
-                aspeed = 88;
-            break;
-            case 11: //+1
-                aspeed = 93;
-            break;
-            case 10: //+2
-                aspeed = 100;
-            break;
-            case 9: //+3
-                aspeed = 107;
-            break;
-            case 8: //+4
-                aspeed = 115;
-            break;
-            case 7: //+5
-                aspeed = 125;
-            break;
-            case 6: //+6
-                aspeed = 136;
-            break;
-            default:
-            {
-                aspeed=88;  //LMA: normal, else there won't be any attacks.
-                Log(MSG_WARNING,"Unknow aspeed for weapon %i (%i)",items[7].itemnum,wpnspd);
-            }
-            break;
+            Log(MSG_WARNING,"Weird Aspeed value for weapon value=%i (STB ASpeed=%i)",items[7].itemnum,wpnspd);
+            temp_speed=88;
         }
+ 
+        aspeed=temp_speed;
     }
     else
+    {
+        //bare fists.
         aspeed = 115;
+    } 
     UINT weapontype = 0;
     weapontype = GServer->EquipList[WEAPON].Index[items[7].itemnum]->type;
     switch(weapontype)
