@@ -430,7 +430,7 @@ void CCharacter::NormalAttack( CCharacter* Enemy )
     /*if(IsPlayer( ))
         hitpower = (long int)floor(attack * 1.2 );*/
     if(IsPlayer( )) //temp fix to find balance btw monster and player
-        hitpower = (long int)floor(attack * (GServer->Config.PlayerDmg/100.00));
+        hitpower = (long int)floor(attack + (Stats->Level) + (GServer->Config.PlayerDmg/100.00*1.4));
     if(IsMonster( )) //temp fix to find balance btw monster and player
         hitpower = (long int)floor(attack * (GServer->Config.MonsterDmg/100.00));
 
