@@ -73,39 +73,14 @@ echo creating list_objects.sql table
 
 :upgrade
 echo Installing new database content.
+echo updating list_mobgroups
+%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_mobgroups.sql
 echo updating list_npcs
 %mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_npcs.sql
-echo updating list_npcs_special
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_npcs_special.sql
-echo updating list_respawnzones
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_respawnzones.sql
-echo updating spawnareas
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_spawnareas.sql
-echo updating telegates
+echo updating list_objects
+%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_objects.sql
+echo updating list_telegates
 %mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_telegates.sql
-echo updating storage
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < storage.sql
-echo mileage
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < mileage.sql
-echo item_drops
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < item_drops.sql
-echo ban_list
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < ban_list.sql
-echo custom events
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_customevents.sql
-echo custom gates
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_customgates.sql
-echo extra stats
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_extra_stats.sql
-echo skillbooks
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_skillbooks.sql
-echo wishlist
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < wishlist.sql
-echo GM Cart, CG list
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_cart_cg.sql
-echo GM allskill
-%mysqlPath% -h %host% -u %user% --password=%pass% -D %db% < list_skills.sql
-
 
 :end
 echo.
