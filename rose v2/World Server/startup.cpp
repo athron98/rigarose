@@ -488,6 +488,7 @@ bool CWorldServer::InitDefaultValues()
     nullzone->MapTime = 0;
     nullzone->LastUpdate = 0;
     nullzone->CurrentTime = 0;
+    nullzone->nb_summons=0;
     for(UINT i=0;i<MapList.max;i++)
     {
         MapList.Index[i] = nullzone;
@@ -2614,6 +2615,20 @@ bool CWorldServer::LoadZoneData( )
             Log(MSG_WARNING, "\nError allocing memory: use" );
             return false;
         }
+
+        //LMA: resetting to good values.
+        newzone->id =0;
+        newzone->dayperiod = 1;
+        newzone->morningtime = 0;
+        newzone->daytime = 0;
+        newzone->eveningtime = 0;
+        newzone->nighttime = 0;
+        newzone->allowpvp = 0;
+        newzone->allowpat = 0;
+        newzone->MapTime = 0;
+        newzone->LastUpdate = 0;
+        newzone->CurrentTime = 0;
+        newzone->nb_summons=0;
 
         newzone->id = i;
 

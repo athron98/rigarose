@@ -31,7 +31,8 @@ unsigned int CPlayer::GetDodge( )
     UINT pDodge = 0;//Passive Skill % Value
     UINT vDodge = 0;//Passive Skill Value
 
-    Dodge = (UINT)floor((((Stats->Level * 0.3) + ((Attr->Dex + Attr->Edex) * 1.9)) + 10 ) * 0.4);
+    //Dodge = (UINT)floor((((Stats->Level * 0.3) + ((Attr->Dex + Attr->Edex) * 1.9)) + 10 ) * 0.4);//Tomiz: Old Formula
+    Dodge = (UINT)floor((Stats->Level * 0.3) + ((Attr->Dex + Attr->Edex) * 1.25));//Tomiz:Base Stats FIXED
 
     for(UINT i=1;i<9;i++)               //Dodge from Item Refine
     {
@@ -231,7 +232,8 @@ unsigned int CPlayer::GetAccury( )
     {
         if(items[7].count == 0)
         {
-            Accury = (UINT)floor((((Attr->Con + Attr->Econ )+10)*0.5) + 15 );
+            //Accury = (UINT)floor((((Attr->Con + Attr->Econ )+10)*0.5) + 15 );//Tomiz: Old Formula
+            Accury = (UINT)floor(Stats->Level + (Attr->Con + Attr->Econ));//Tomiz:Naked Stats FIXED  TODO : Fix acc With weapon
         }
         else if(items[7].count !=0)
         {
@@ -3806,7 +3808,10 @@ unsigned int CPlayer::GetMaxMP( )
 // Get HP Regeneration Amount                   //A_HP_REC_RATE(27) / HP_REC_AMONT5(56)
 unsigned int CPlayer::GetHPRegenAmount( )
 {
-    UINT amount = (UINT)ceil ( Stats->MaxHP * 0.02 );
+    //LMA: fix from Planetary_Myth
+    //UINT amount = (UINT)ceil ( Stats->MaxHP * 0.02 );
+    UINT amount = (UINT)ceil ( Stats->MaxHP * 0.022 );
+
     UINT pamount = 0;//Passive Skill % Value
     UINT vamount = 0;//Passive Skill Value
 
@@ -3918,7 +3923,10 @@ unsigned int CPlayer::GetHPRegenAmount( )
 // Get MP Regeneration Amount                   //A_MP_REC_RATE(28) / MP_REC_RATE(57)
 unsigned int CPlayer::GetMPRegenAmount( )
 {
-    UINT amount = (UINT)ceil ( Stats->MaxMP * 0.02 );
+    //LMA: fix from Planetary_Myth
+    //UINT amount = (UINT)ceil ( Stats->MaxMP * 0.02 );
+    UINT amount = (UINT)ceil ( Stats->MaxMP * 0.03 );
+
     UINT pamount = 0;//Passive Skill % Value
     UINT vamount = 0;//Passive Skill Value
 

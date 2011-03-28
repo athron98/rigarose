@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="default" />
-	<File name="..\Common\SocketServer.cpp" open="1" top="0" tabpos="4">
+	<File name="..\Common\SocketServer.cpp" open="0" top="0" tabpos="4">
 		<Cursor position="3687" topLine="118" />
 	</File>
 	<File name="..\Common\log.cpp" open="0" top="0" tabpos="1">
@@ -10,7 +10,7 @@
 	<File name="..\Common\log.h" open="0" top="0" tabpos="0">
 		<Cursor position="2369" topLine="42" />
 	</File>
-	<File name="..\Common\sockets.h" open="1" top="0" tabpos="6">
+	<File name="..\Common\sockets.h" open="0" top="0" tabpos="6">
 		<Cursor position="7005" topLine="196" />
 	</File>
 	<File name="..\World Server\MainProcess.cpp" open="0" top="0" tabpos="2">
@@ -19,7 +19,7 @@
 	<File name="..\World Server\MonsterEvents.cpp" open="0" top="0" tabpos="2">
 		<Cursor position="20833" topLine="632" />
 	</File>
-	<File name="..\World Server\ServerFunctions.cpp" open="1" top="0" tabpos="1">
+	<File name="..\World Server\ServerFunctions.cpp" open="1" top="1" tabpos="1">
 		<Cursor position="33746" topLine="931" />
 	</File>
 	<File name="..\World Server\WorldMonster.cpp" open="0" top="0" tabpos="3">
@@ -52,13 +52,13 @@
 	<File name="..\World Server\console.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="53" topLine="0" />
 	</File>
-	<File name="..\World Server\datatypes.h" open="1" top="0" tabpos="7">
+	<File name="..\World Server\datatypes.h" open="1" top="0" tabpos="5">
 		<Cursor position="11338" topLine="521" />
 	</File>
 	<File name="..\World Server\extrafunctions.cpp" open="0" top="0" tabpos="1">
 		<Cursor position="16067" topLine="551" />
 	</File>
-	<File name="..\World Server\gmcmds.cpp" open="1" top="0" tabpos="5">
+	<File name="..\World Server\gmcmds.cpp" open="1" top="0" tabpos="4">
 		<Cursor position="1292" topLine="16" />
 	</File>
 	<File name="..\World Server\main.cpp" open="0" top="0" tabpos="3">

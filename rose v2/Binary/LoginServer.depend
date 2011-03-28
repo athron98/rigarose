@@ -1,1 +1,72 @@
 # depslib dependency file v1.0
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\socketbase.cpp
+	"sockets.h"
+
+1288451286 e:\wow serv other files\rose online\trunk\rose v2\common\sockets.h
+	<windows.h>
+	<winsock2.h>
+	<unistd.h>
+	<netinet/in.h>
+	<sys/socket.h>
+	<sys/types.h>
+	<arpa/inet.h>
+	<sys/ioctl.h>
+	<cstdarg>
+	<errno.h>
+	<mysql/mysql.h>
+	<cstdio>
+	<cstdlib>
+	<iostream>
+	<vector>
+	<string>
+	<cstdio>
+	<exception>
+	<time.h>
+	<assert.h>
+	<math.h>
+	<pthread.h>
+	<map>
+	<csignal>
+	"log.h"
+	"rosecrypt.hpp"
+	"config.h"
+	"database/database.h"
+
+1288451286 e:\wow serv other files\rose online\trunk\rose v2\common\log.h
+
+1288451286 e:\wow serv other files\rose online\trunk\rose v2\common\rosecrypt.hpp
+	<windows.h>
+
+1288451286 e:\wow serv other files\rose online\trunk\rose v2\common\config.h
+
+1288451286 e:\wow serv other files\rose online\trunk\rose v2\common\database\database.h
+	"../sockets.h"
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\socketclient.cpp
+	"sockets.h"
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\socketserver.cpp
+	"sockets.h"
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\config.cpp
+	<cstdio>
+	<cstring>
+	<cstdlib>
+	<ctype.h>
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\database\database.cpp
+	"database.h"
+	"../log.h"
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\log.cpp
+	<conio.h>
+	<windows.h>
+	<cstdio>
+	<cstdio>
+	<string>
+	<time.h>
+	"log.h"
+
+1288451286 source:e:\wow serv other files\rose online\trunk\rose v2\common\rosecrypt.cpp
+	"rosecrypt.hpp"
+
