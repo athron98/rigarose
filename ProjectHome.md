@@ -1,0 +1,1 @@
+this is my personal upload of my rose online source code so i don't lose any of my changes. all credits go to the osrose team and i do not take any credit for this work. please feel free to take the code and do as you wish.
